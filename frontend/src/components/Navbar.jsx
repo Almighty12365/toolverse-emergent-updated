@@ -26,7 +26,7 @@ export default function Navbar() {
           <div className="relative" onMouseEnter={()=>setDrop(true)} onMouseLeave={()=>setDrop(false)}>
             <button className="px-4 py-2 text-sm text-zinc-300 hover:text-white transition-colors">All Tools</button>
             {drop && (
-              <div className="absolute top-full left-0 w-[680px] bg-zinc-900/95 backdrop-blur-xl border border-white/10 rounded-2xl shadow-2xl p-5 grid grid-cols-2 gap-2">
+              <div className="absolute top-full left-0 w-[680px] max-h-[80vh] overflow-y-auto bg-zinc-900/95 backdrop-blur-xl border border-white/10 rounded-2xl shadow-2xl p-5 grid grid-cols-2 gap-2">
                 {TOOL_CATEGORIES.map(cat => (
                   <div key={cat.id}>
                     <div className="text-xs uppercase tracking-wider text-zinc-500 mb-2 px-2">{cat.label}</div>
